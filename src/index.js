@@ -15,11 +15,14 @@ import FormikForm from './Exercise 8.01/FormikForm'
 import MyEnhancedLoginForm from './Exercise 8.01/MyEnhancedLoginForm'
 import Routing from './Exercise 9.0.1/Routing'
 import AppStore from './Activity 9.01/AppStore'
+import ImageToggle from './Exercise 11.01/ImageToggle'
+import LoginButton from './Exercise 11.02/LoginButton'
+import Counter from './Activity 11.01/Counter'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppStore />
+    <Counter />
   </React.StrictMode>,
   document.getElementById('root')
 );
