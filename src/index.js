@@ -2,11 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Quiz from './Quiz';
+import Profile from './Profile';
+import Message from './Message/Message';
+import AppTheme from './Exercise 6.01/AppTheme'
+import Parent from './Exercise 6.02/Parent'
+import ParentProduct from './Activity 6.01/ParentProduct'
+import Animal from './Exercise 7.01/Animal'
+import UncontrolledForm from './Exercise 8.01/UncontrolledForm'
+import ControlledForm from './Exercise 8.01/ControlledForm'
+import FormikForm from './Exercise 8.01/FormikForm'
+import MyEnhancedLoginForm from './Exercise 8.01/MyEnhancedLoginForm'
+import Routing from './Exercise 9.0.1/Routing'
+import AppStore from './Activity 9.01/AppStore'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppStore />
   </React.StrictMode>,
   document.getElementById('root')
 );
