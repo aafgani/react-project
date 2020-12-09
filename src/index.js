@@ -18,11 +18,14 @@ import AppStore from './Activity 9.01/AppStore'
 import ImageToggle from './Exercise 11.01/ImageToggle'
 import LoginButton from './Exercise 11.02/LoginButton'
 import Counter from './Activity 11.01/Counter'
+import UsernameForm from './Exercise 12.02/SimpleForm'
+import Chat from './Activity 12.01/Chat'
 import reportWebVitals from './reportWebVitals';
+import Stock from './Exercise 12.01/Stock'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Counter />
+    <Chat />
   </React.StrictMode>,
   document.getElementById('root')
 );
