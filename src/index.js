@@ -20,12 +20,14 @@ import LoginButton from './Exercise 11.02/LoginButton'
 import Counter from './Activity 11.01/Counter'
 import UsernameForm from './Exercise 12.02/SimpleForm'
 import Chat from './Activity 12.01/Chat'
+import ShoppingCart from './Exercise 13.01/ShoppingCart'
 import reportWebVitals from './reportWebVitals';
 import Stock from './Exercise 12.01/Stock'
+import RoutingPage from './homepage'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Chat />
+    <RoutingPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
