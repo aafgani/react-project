@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import {AuthService, AuthContext} from './AuthService'
+import Address from './Address'
+import Settings from "./Settings";
 
 const ShoppingCartContext = React.createContext();
 
@@ -17,17 +20,23 @@ const ShoppingCartProvider = props => {
 };
 
 const Checkout = props => {
-    return(
-        <div
-        style = {{
-            border: "3px solid black",
-            padding: 5,
-            flexGrow: 1,
-            flexShrink: 1,
-            flexBasis: "100%"}}
-        >
-        <Pay createTransaction={props.createTransaction} />
-        </div>
+    const user = React.useContext(AuthContext);
+    const mainAddress = user && user.addresses 
+            ? user.addresses.find(address => !!address.main)
+    : null;
+    return (
+    <div
+    style={{
+    border: "3px solid black",
+    padding: 5,
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: "100%"
+    }}
+    >
+    {mainAddress ? <Address {...mainAddress} /> : "No addresses found!"}
+    <Pay />
+    </div>
     );
 };
 
@@ -107,15 +116,18 @@ const ShoppingCartApp = () => {
         if (amount !== 0) alert("transaction was created with " + amount);
         };
         return (
-        <ShoppingCartProvider>
-        <div
-        className="App"
-        style={{ display: "flex", justifyContent: "space-between" }}
-        >
-        <Cart /> 
-        <Checkout createTransaction={createTransaction} />
-        </div>
-        </ShoppingCartProvider>
+        <AuthService>
+            <ShoppingCartProvider>
+            <div
+            className="App"
+            style={{ display: "flex", justifyContent: "space-between" }}
+            >
+            <Cart /> 
+            <Checkout createTransaction={createTransaction} />
+            </div>
+            <Settings/>
+            </ShoppingCartProvider>
+        </AuthService>
         );
   };
   export default ShoppingCartApp;

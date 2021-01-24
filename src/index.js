@@ -24,6 +24,7 @@ import ShoppingCart from './Exercise 13.01/ShoppingCart'
 import reportWebVitals from './reportWebVitals';
 import Stock from './Exercise 12.01/Stock'
 import RoutingPage from './homepage'
+import TemperatureApp from './Exercise 14.01/Temperature'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -11,6 +11,9 @@ import LoginButton from './Exercise 11.02/LoginButton'
 import Counter from './Activity 11.01/Counter'
 import UsernameForm from './Exercise 12.02/SimpleForm'
 import ImageToggle from './Exercise 11.01/ImageToggle'
+import ShoppingCart from './Exercise 13.01/ShoppingCart'
+import ShoppingCart2 from './Exercise 13.02/ShoppingCart2'
+import TemperatureApp from './Exercise 14.01/Temperature'
 
 const RoutingPage = () => (
     <Router>
@@ -75,6 +78,9 @@ const Home = () => (
             <Link to={`${url}/1101`}>Exercise 11.01</Link> &nbsp;
             <Link to={`${url}/1102`}>Exercise 11.02</Link> &nbsp;
             <Link to={`${url}/1202`}>Exercise 12.02</Link> &nbsp;
+            <Link to={`${url}/1301`}>Exercise 13.01</Link> &nbsp;
+            <Link to={`${url}/1302`}>Exercise 13.02</Link> &nbsp;
+            <Link to={`${url}/1401`}>Exercise 14.01</Link> &nbsp;
             <hr />
             <Switch>
                 <Route path={`${path}/101`}><Quiz/></Route>
@@ -85,6 +91,9 @@ const Home = () => (
                 <Route path={`${path}/1101`}><ImageToggle/></Route>
                 <Route path={`${path}/1102`}><LoginButton/></Route>
                 <Route path={`${path}/1202`}><UsernameForm/></Route>
+                <Route path={`${path}/1301`}><ShoppingCart/></Route>
+                <Route path={`${path}/1302`}><ShoppingCart2/></Route>
+                <Route path={`${path}/1401`}><TemperatureApp/></Route>
             </Switch>
           </Router>
       )
